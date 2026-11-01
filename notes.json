@@ -1,0 +1,22 @@
+{
+ "funder_context": {
+  "0xfb200657f7266157a45dfcc6c09690726daa24e6": {
+   "label": "treasury",
+   "detail": "First and only BNB credit is 0.0005 BNB sent directly by the treasury (0x7C34E9…359f) on 2026-10-10 08:25:31 COT, block 126835408. The payout wallet was seeded by the treasury itself."
+  },
+  "0x2ae18c3b2fc18545edd35beeaef97cc2ed908a02": {
+   "label": "router swap payout (dust)",
+   "detail": "Only BNB credit is 0.000000006257934517 BNB delivered by the PancakeSwap V2 Router (0x10ED43C7…24E) as the `to` of swapExactTokensForETHSupportingFeeOnTransferTokens, tx 0x5bd8ede524ed31fc2a86136e6a8e452b4c1b18aa420178fe895d8eca72bed6ef, block 130632004 (2026-11-02 03:20:04 COT) — i.e. AFTER the audited day. The swap was signed by 0xb51db3711fdae72b6ac447dbbebceacfc307372e. Not a funding wallet: during 10-29 this address held no BNB at all."
+  },
+  "0xab39aa1e2db4036e01cf7e919b3f239b3ff90160": {
+   "label": "contract transfer via ERC-4337",
+   "detail": "First BNB credit is 0.000148891209770897 BNB from contract 0xc1ea672cf70891a2c73e536963ecb11168eb570a inside an ERC-4337 EntryPoint (0x0000000071727De2…da032) handleOps transaction 0x4ebb6e4d294ff40d30295c857f3b19bae19bf73b3fb0d71fa4944362dfa49e79, block 128594175 (2026-10-19 12:28:03 COT), bundled by 0x4337031ade3a53d10121f350369907076b6d32a4. The value came from a contract, so no EOA funder is provable from the chain; nonce 5, so the address does transact."
+  }
+ },
+ "unexplained": [
+  "10 of the 13 recipients have never received BNB and have never sent a transaction (nonce 0, BNB balance 0): their operator is not attributable from funding data. They can hold FLAPJAX but cannot move it without gas, which is consistent with collector addresses that are funded only when a withdrawal is needed.",
+  "0x2ae18c3b2fc18545edd35beeaef97cc2ed908a02 held no BNB on 10-29; its only BNB credit is a 0.000000006257934517 BNB swap payout delivered on 10-30 (after the audited day) by the PancakeSwap V2 Router to the `to` of a swap signed by 0xb51db3711fdae72b6ac447dbbebceacfc307372e. That is a swap output, not a funder wallet.",
+  "0xab39aa1e2db4036e01cf7e919b3f239b3ff90160 was funded with 0.000148891209770897 BNB on 2026-10-19 by contract 0xc1ea672cf70891a2c73e536963ecb11168eb570a inside an EntryPoint handleOps transaction — a contract-to-wallet transfer, so no EOA first funder is provable. It took the day's largest single payment (3,000,000 FLAPJAX, 52.4% of the day).",
+  "No two distinct recipients share a first BNB funder on this day, so no cross-recipient sybil link can be proven. The treasury is the first funder of exactly one recipient (0xfb200657…24e6, 0.0005 BNB on 2026-10-10), which ties that payout wallet to the treasury but no other recipient."
+ ]
+}
