@@ -1,0 +1,44 @@
+[
+ {
+  "addr": "0xa15c58e7008fc7a0331cfcc86a28af99fd21b93c",
+  "is_contract": false,
+  "code_len": 2,
+  "nonce": 0,
+  "bnb_balance": 0.0
+ },
+ {
+  "addr": "0xabc2c3daffa4c1963299da225c25f2aa7d4ddf62",
+  "is_contract": false,
+  "code_len": 2,
+  "nonce": 0,
+  "bnb_balance": 0.0
+ },
+ {
+  "addr": "0xca58696564492ef9c3229c89072365b253bda246",
+  "is_contract": false,
+  "code_len": 2,
+  "nonce": 1,
+  "bnb_balance": 0.000463392
+ },
+ {
+  "addr": "0xdf4ff9d2f45f99f11a90b16f277d4b7edddb72a5",
+  "is_contract": false,
+  "code_len": 2,
+  "nonce": 0,
+  "bnb_balance": 0.0
+ },
+ {
+  "addr": "0xeba13671a2f1993ee26a4e286db6e491fa5c99bc",
+  "is_contract": false,
+  "code_len": 2,
+  "nonce": 0,
+  "bnb_balance": 0.0
+ },
+ {
+  "addr": "0xfb200657f7266157a45dfcc6c09690726daa24e6",
+  "is_contract": false,
+  "code_len": 2,
+  "nonce": 0,
+  "bnb_balance": 0.0005
+ }
+]
